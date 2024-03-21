@@ -1,0 +1,20 @@
+<?php
+// Database credentials
+$servername = "localhost"; // Change to your database host
+$username = "username"; // Change to your database username
+$password = "password"; // Change to your database password
+$database = "dbname"; // Change to your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connected successfully";
+}
+
+// Close connection (optional)
+$conn->close();
+?>
